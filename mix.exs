@@ -22,6 +22,8 @@ defmodule LfePlug.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:plug, "~> 1.15"},
+      {:bandit, "~> 1.0"},
       {:mix_lfe, github: "lfe/mix", branch: "master", only: [:dev, :test], runtime: false}
     ]
   end

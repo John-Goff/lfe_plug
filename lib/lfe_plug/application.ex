@@ -4,12 +4,12 @@ defmodule LfePlug.Application do
   @moduledoc false
 
   use Application
+  alias LfePlug.Router
 
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: LfePlug.Worker.start_link(arg)
-      # {LfePlug.Worker, arg}
+      {Bandit, plug: Router, scheme: :http, port: 7157}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

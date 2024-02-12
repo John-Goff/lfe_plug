@@ -1,21 +1,34 @@
 # LfePlug
 
-**TODO: Add description**
+This is an example of using Plug from Lisp Flavoured Erlang.
 
-## Installation
+## Caveats
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `lfe_plug` to your list of dependencies in `mix.exs`:
+At time of writing, it's possible to write a module based plug in LFE and use that plug
+in a router written in Elixir. It's not possible to write the router in LFE, as it's
+heavily macro based.
 
-```elixir
-def deps do
-  [
-    {:lfe_plug, "~> 0.1.0"}
-  ]
-end
+There is an issue when writing the main application in LFE. Upon compiling for the first
+time, you'll recieve an error like this
+
+```
+==> lfe_plug
+Compiling 2 files (.lfe)
+
+21:25:06.966 [error] beam/beam_load.c(144): Error loading module application:
+  corrupt file header
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/lfe_plug>.
+If this happens, simply stopping with `CTRL-c` and then restarting compilation seems to
+work.
 
+## Running
+
+You will need Elixir and Erlang installed, see https://elixir-lang.org for installation
+instructions.
+
+Clone this repo to your computer, `cd` into the repo, and install dependencies with
+`mix deps.get`. 
+
+You can now run the server with `mix run --no-halt`. The server is now running and
+accessible at the URL `http://localhost:7159/`.

@@ -1,5 +1,6 @@
 (defmodule #eLfePlug.LfePlug
   "A basic plug written in Lisp Flavoured Erlang."
+  (behaviour #ePlug)
   (import (from #ePlug.Conn (send_resp 3)))
   (export
    (init 1) (call 2)))

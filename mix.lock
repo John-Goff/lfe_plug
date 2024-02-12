@@ -1,0 +1,6 @@
+%{
+  "color": {:hex, :erlang_color, "1.0.0", "145fe1d2e65c4516e4f03fefca6c2f47ebad5899d978d70382a5cfe643e4ac9e", [:rebar3], [], "hexpm", "6b17e5e589c8fef540574c9ea32b67cec2c8a44283aafe474d6e5818fb3ee038"},
+  "lfe": {:hex, :lfe, "2.1.3", "6efcb2bbc1ffc21dc5d1c092f00efdb397eac889474ac5c86edf78a3557cc730", [:rebar3], [], "hexpm", "4e4bad515a169ae418feb7374ea1c8d741faea9d95e266ce343b45bcc377f55b"},
+  "ltest": {:git, "https://github.com/John-Goff/ltest.git", "de33457983863ab7608bd3e22940090b4166e93f", [branch: "behaviour-returns-list"]},
+  "mix_lfe": {:git, "https://github.com/lfe/mix.git", "0a2b9c8a3124dbe50aed01946c0c33aea99db9bb", [branch: "master"]},
+}

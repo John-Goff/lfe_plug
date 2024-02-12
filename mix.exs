@@ -6,6 +6,9 @@ defmodule LfePlug.MixProject do
       app: :lfe_plug,
       version: "0.1.0",
       elixir: "~> 1.16",
+      # LFE must come first in order to write plugs in LFE. Otherwise the
+      # before_compile will not see that the module exists.
+      compilers: [:lfe] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]

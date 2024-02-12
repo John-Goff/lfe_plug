@@ -30,6 +30,7 @@ defmodule LfePlug.Router do
   end
 
   get("/elixir", to: LfePlug.ElixirPlug)
+  get("/lfe", to: LfePlug.LfePlug)
 
   match _ do
     send_resp(conn, 404, "not found")
